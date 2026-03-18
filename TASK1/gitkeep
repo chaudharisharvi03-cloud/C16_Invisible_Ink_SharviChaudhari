@@ -1,0 +1,109 @@
+#1
+number=int(input("enter a number))
+bin_equiv=bin(number)
+print(bin_equiv[2:])
+
+
+
+
+#2(i)
+number=int(input("enter the number"))
+sum=0
+string=str(number)
+lists=list(string)
+list1=lists[::-1]
+i=0
+while i<len(string):
+    for s in list1:
+        sum+=((int(s))*(2**i))
+        i+=1
+print(sum)
+#2(ii)
+number=int(input("enter the number:"))
+a=str(number)
+decimalnumb=int(a,2)
+print(decimalnumb)
+
+#3
+character=input("enter a single character:")
+ans=str(ord(character))
+print(ans.zfill(8))
+
+
+
+#4
+word=input("enter the word")
+lists=[]
+for i in word:
+    a=ord(i)
+    bineq=bin(a)
+    ans=bineq[2:]
+    for s in ans:
+        lists.append(s)
+print(lists)
+
+
+
+
+
+
+#5
+leastsignificantbit=x&1
+
+
+
+#6
+leastsignificantbit=x & ~1
+
+
+
+
+
+
+#7
+leastsignificantbit=x | 1
+
+
+#8
+def embed_bit(pixel_value,secret_bit):
+    #secret_bit is only 0 or 1
+    #pixel_value can be any integer
+    binary=bin(pixel_value)
+    answer=int(binary[2:])
+    if secret_bit==0:
+        ans=answer & ~1
+        print(int(str(ans),2))
+    elif secret_bit==1:
+        ans=answer | 1
+        print(int(str(ans),2))
+pixel_value=int(input("enter a number"))
+secret_bit=int(input("enter either 1 or 0"))
+embed_bit(pixel_value,secret_bit)
+
+
+
+
+#9
+def extract_bit(pixel_value):
+    print(pixel_value & 1)
+pixel_value=int(input("enter a number"))
+extract_bit(pixel_value)
+
+
+#10
+def embed_message(pixel_values,secret_message):
+    lists=[]
+    for i in range(len(secret_message)):
+        bineq=bin(pixel_values[i])
+        answer=int(bineq[2:])
+        if secret_message[i]==0:
+            ans=answer & ~1
+            lists.append(int(str(ans),2))
+        elif secret_message[i]==1:
+            ans=answer | 1
+            lists.append(int(str(ans),2))
+    print(lists)
+pixel_values=[int(x) for x in input("enter the pixel values:").split()]
+secret_message=[int(x) for x in input("enter the secret message:").split()]
+embed_message(pixel_values,secret_message)
+
