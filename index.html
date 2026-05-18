@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="logo" id="sublogo">
+            <img src="Untitled 2.jpg" alt="Logo" height="80px" width="80px">
+        </div>
+            <h2 class="logo" id="min">InvisibleInk</h2>
+        <a href="working.html">How it Works</a> 
+        <a href="working.html">Features</a>
+        <div class="logo">
+            <p>Try For Free</p>
+        </div>
+    <div class="container">
+        <h2 id="check">Hide secrets inside</h2>
+        <h2 id="mate">ordinary images</h2>
+        <p id="lets">Embed messages, files, and data invisibly into images. No one will know they're there.</p>
+        <input type="radio" id="inject-btn" name="options" value="option1" checked>
+        <label for="inject-btn">Inject</label>
+        <input type="radio" id="extract-btn" name="options" value="option2">
+        <label for="extract-btn">Extract</label>
+        <div class="content inject-div">
+            <h2>Inject content</h2>
+            <input type="file" id="fileInput">Upload file
+            <input type="text" id="messageInput" placeholder="Enter message">
+            <button id="injectButton">Inject</button>   
+            <button id="downloadButton">Download Image</button>
+
+        </div>
+        <div class="content extract-div">
+            <h2>Extract content</h2>
+            <input type="file" id="imageInput">Upload image
+            <button id="extractButton">Extract</button>
+            <div id="extractedContent"></div>
+            <textarea id="extractedMessage" placeholder="Extracted message will appear here"></textarea>
+        
+    </div>   
+</body>
+</html>
